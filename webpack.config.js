@@ -19,6 +19,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			// подключение eslint
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				enforce: 'pre',
+				use: 'eslint-loader'
+			},
+			// -------------------
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -41,6 +49,16 @@ module.exports = {
 			}
 		]
 	},
+	resolve: {
+		alias: {
+			'components': path.resolve(__dirname, './src/components'),
+			'containers': path.resolve(__dirname, './src/containers'),
+			'actions': path.resolve(__dirname, './src/actions'),
+			'reducers': path.resolve(__dirname, './src/reducers'),
+			'store': path.resolve(__dirname, './src/store'),
+			'assets': path.resolve(__dirname, './src/assets')
+		}
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, './src/assets/index.html'),
@@ -48,7 +66,7 @@ module.exports = {
 			path: outputPath
 		}),
 		new webpack.NamedModulesPlugin(), //info in console chenge as component
-	  new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin()
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, './dist'),
@@ -56,6 +74,6 @@ module.exports = {
 		historyApiFallback: true,
 		inline: true,
 		hot: true,
-	  host: '0.0.0.0'
+		host: '0.0.0.0'
 	}
 }

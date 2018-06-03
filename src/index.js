@@ -1,7 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './app'
-
+import ChatComponent from './components/Chat'
+import './assets/styles/style.scss'
+// import App from './app'  
 render(
-	<App />, document.querySelector('#app')
+	// <App />
+	<ChatComponent />,
+	document.querySelector('#mount_app')
 )
