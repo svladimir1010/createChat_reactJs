@@ -10,6 +10,7 @@ module.exports = {
 	context: __dirname,
 	entry: {
 		app: [
+			'react-hot-loader/patch',
 			path.resolve(__dirname, './src/index.js')
 		]
 	},
