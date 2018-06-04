@@ -18,9 +18,3 @@ renderApp(Chat)
 if (module.hot) {
 	module.hot.accept('containers/Chat', () => { renderApp(Chat) })
 }
-
-// render(
-
-// 	<Chat />,
-// 	document.querySelector('#mount_app')
-// )
