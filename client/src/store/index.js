@@ -4,6 +4,7 @@ import chatReducer from 'reducers/index'
 const chatStore = createStore(
 	chatReducer,
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	// Connect Dev_TOOLS
 )
 
 export default chatStore    

@@ -20,4 +20,4 @@ class Chat extends Component {
 }
 
 // export default hot(module)(Chat)
-export default  (Chat)   
+export default  (Chat)    
