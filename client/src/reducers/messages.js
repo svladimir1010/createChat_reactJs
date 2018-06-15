@@ -1,4 +1,4 @@
-const messageReducer = (state = {}, action) => {
+const messageReducer = (state = {}) => {
 	return state
 }
 

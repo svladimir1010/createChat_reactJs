@@ -26,7 +26,7 @@ wss.on('connection', function (ws) {
 				time: (new Date()).getTime(),
 				text: msg,
 				author: userName,
-				color: userColor
+				color: userColor   
 			};
 			var json = JSON.stringify({ type: 'message', data: obj });
 			for (var i = 0; i < clients.length; i++) {

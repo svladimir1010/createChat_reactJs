@@ -58,7 +58,7 @@ module.exports = {
 			'reducers': path.resolve(__dirname, './src/reducers'),
 			'store': path.resolve(__dirname, './src/store'),
 			'assets': path.resolve(__dirname, './src/assets'),
-			'utill': path.resolve(__dirname, './src/utill')
+			'util': path.resolve(__dirname, './src/util') 
 		}
 	},
 	plugins: [
